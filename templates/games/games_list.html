@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game List</title>
+</head>
+<body>
+<h1>Список игр</h1>
+<ul>
+  {% for i in game_key %}
+  <li>
+      <h2>{{i.title}}</h2>
+      <img src="{{i.image.url}}" alt="">
+      <p>{{i.description}}</p>
+      <a href="/game_detail/{{i.id}}">Страница игры</a>
+  </li>
+  {% endfor %}
+</ul>
+</body>
+</html>
