@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Game</title>
+</head>
+<body>
+<form action="/create_game/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Сохрнаить</button>
+    <button type="reset">Отмена</button>
+</form>
+</body>
+</html>
