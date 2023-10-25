@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Create Game</title>
-</head>
-<body>
-<form action="/create_game/" method="post" enctype="multipart/form-data">
+{% load static %}
+{% include 'games/header.html' %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<form action="/create_game/" method="post" enctype="multipart/form-data" class="air">
     {% csrf_token %}
     {{ form.as_p }}
+<div class="form-row-icon">
     <button type="submit">Сохрнаить</button>
     <button type="reset">Отмена</button>
+</div>
 </form>
-</body>
-</html>
+
+{% include 'games/footer.html' %}

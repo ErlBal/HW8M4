@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
+{% include 'games/header.html' %}
+
     {% for i in info %}
         {{ i.title }}
         <br>
@@ -14,5 +9,5 @@
         <br>
         {{i.created_at}}
     {% endfor %}
-</body>
-</html>
+
+{% include 'games/footer.html' %}

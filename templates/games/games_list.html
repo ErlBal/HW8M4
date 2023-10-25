@@ -1,21 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Game List</title>
-</head>
-<body>
-<h1>Список игр</h1>
-<ul>
-  {% for i in game_key %}
-  <li>
-      <h2>{{i.title}}</h2>
-      <img src="{{i.image.url}}" alt="">
-      <p>{{i.description}}</p>
-      <a href="/game_detail/{{i.id}}">Страница игры</a>
-  </li>
-  {% endfor %}
-</ul>
-<button><a href="/create_game/">Добавить игру</a></button>
-</body>
-</html>
+{% load static %}
+{% include 'games/header.html' %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<div class="text-center">
+    <span class="badge text-bg-dark"><h1>Список доступных игр</h1></span>
+</div>
+
+<div class="block-box">
+{% for i in game_key %}
+    <div class="card" style="width: 18rem;">
+      <img src="{{i.image.url}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{i.title}}</h5>
+        <p class="card-text">{{i.description}}</p>
+        <a href="/game_detail/{{i.id}}" class="btn btn-primary">Подробнее</a>
+      </div>
+    </div>
+{% endfor %}
+</div>
+{% include 'games/footer.html' %}
