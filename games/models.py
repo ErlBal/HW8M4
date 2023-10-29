@@ -25,3 +25,21 @@ class Games(models.Model):
 
     def __str__(self):
         return f'{self.title}.{self.genre}'
+
+
+class ReviewGame(models.Model):
+    STARS = (
+        ('*', '*'),
+        ('* *', '* *'),
+        ('* * *', '* * *'),
+        ('* * * *', '* * * *'),
+        ('* * * * *', '* * * * *')
+    )
+    game_select = models.ForeignKey(Games, on_delete=models.CASCADE,
+                                    related_name='comment_object')
+    text_comment = models.TextField()
+    rate_stars = models.CharField(max_length=20, choices=STARS)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'{self.game_select} - {self.rate_stars}'

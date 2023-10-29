@@ -118,3 +118,12 @@
 .form-row-icon input[type="submit"] {
   cursor: pointer;
 }
+.table-center{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: black;
+}
+

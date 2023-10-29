@@ -17,7 +17,7 @@
           <a class="nav-link active" aria-current="page" href="/game_list">Главная</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/post_link">Основная</a>
+          <a class="nav-link" href="/test/">Основная</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -26,11 +26,12 @@
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="/create_game">Добавить игру</a></li>
             <li><a class="dropdown-item" href="/admin/">Перейти в ПУ</a></li>
+            <li><a class="dropdown-item" href="/create_review">Добавить отзыв к игре</a></li>
           </ul>
         </li>
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
+      <form action="{% url 'search' %}" method="GET" class="d-flex" role="search">
+        <input class="form-control me-2" typeof="text" type="search" name="q" placeholder="Поиск" aria-label="Поиск">
         <button class="btn btn-outline-success" type="submit">Поиск</button>
       </form>
     </div>

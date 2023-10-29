@@ -6,5 +6,5 @@ app_name = 'guide_sc'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('post_link/', views.person, name='home'),
+    path('test/', views.person, name='home'),
 ]
