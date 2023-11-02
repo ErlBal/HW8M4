@@ -7,5 +7,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('guide_sc.urls', namespace='guide_sc')),
     path('', include('games.urls')),
+    path('', include('parser_app.urls')),
 ]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)\
                +static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

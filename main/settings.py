@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'guide_sc',
     'games',
+    'parser_app',
 ]
 
 MIDDLEWARE = [
