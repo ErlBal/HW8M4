@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'guide_sc',
     'games',
     'parser_app',
+    'custom_users',
 ]
 
 MIDDLEWARE = [
